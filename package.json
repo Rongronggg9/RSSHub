@@ -104,7 +104,7 @@
     "jsdom": "16.5.3",
     "json-bigint": "1.0.0",
     "json5": "2.2.0",
-    "koa": "2.13.1",
+    "koa": "2.13.4",
     "koa-basic-auth": "4.0.0",
     "koa-favicon": "2.1.0",
     "koa-mount": "4.0.0",
