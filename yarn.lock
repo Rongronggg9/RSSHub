@@ -12779,10 +12779,10 @@ toposort@^1.0.0:
   resolved "https://registry.yarnpkg.com/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
   integrity sha1-LmhELZ9k7HILjMieZEOsbKqVACk=
 
-torrent-search-api@2.1.3:
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/torrent-search-api/-/torrent-search-api-2.1.3.tgz#5fe976b2493e07fe4d2315695bf1eccff6974b05"
-  integrity sha512-yQA/T7Rz0Xc0OsdkaJ0G09aSJh4vgt0nsCYKlg9DvSI6kGqxAwlhDAeQncj1gFTsHdPALzXeUqaPCKeigkKc4A==
+torrent-search-api@2.1.4:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/torrent-search-api/-/torrent-search-api-2.1.4.tgz#b60537d9d72a868c38838a78c4a19a878a1f2b68"
+  integrity sha512-gFWQiQgBMjYWrxB6KP9E2SiOaE6FtSBrILippUDw8h3euMrnggrx2S2Vs/jlIduL6/zEa1bGLG3h016jRRGlng==
   dependencies:
     cloudscraper "^4.6.0"
     lodash "^4.17.15"
@@ -13552,10 +13552,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
