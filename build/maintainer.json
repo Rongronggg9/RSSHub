@@ -726,6 +726,9 @@
         "nczitzk",
         "xie-dongping"
     ],
+    "/hameln/chapter/:id": [
+        "huangliangshusheng"
+    ],
     "/hbr/topic/:topic?/:type?": [
         "nczitzk"
     ],
@@ -790,6 +793,9 @@
     "/hkjunkcall/": [
         "nczitzk"
     ],
+    "/hnrb/:id?": [
+        "nczitzk"
+    ],
     "/hongkong/dh/:language?": [
         "nczitzk"
     ],
@@ -812,6 +818,29 @@
         "nczitzk"
     ],
     "/houxu/:category?": [
+        "nczitzk"
+    ],
+    "/hupu/all/:id?": [
+        "nczitzk"
+    ],
+    "/hupu/bbs/:id?/:order?": [
+        "LogicJake",
+        "nczitzk"
+    ],
+    "/hupu/bxj/:id?/:order?": [
+        "LogicJake",
+        "nczitzk"
+    ],
+    "/hupu/dept/:category?": [
+        "nczitzk"
+    ],
+    "/hupu/:category?": [
+        "nczitzk"
+    ],
+    "/hyqss/hyrb/:id?": [
+        "nczitzk"
+    ],
+    "/hyqss/hywb/:id?": [
         "nczitzk"
     ],
     "/icac/news/:lang?": [
@@ -1020,6 +1049,9 @@
     "/knowmedia/:category?": [
         "Fatpandac"
     ],
+    "/kyodonews/:language?/:keyword?": [
+        "Rongronggg9"
+    ],
     "/lanqiao/author/:uid": [
         "huhuhang"
     ],
@@ -1116,6 +1148,9 @@
     ],
     "/medsci/:sid?/:tid?": [
         "nczitzk"
+    ],
+    "/mihoyo/bbs/official/:gids/:type?/:page_size?/:last_id?": [
+        "CaoMeiYouRen"
     ],
     "/mingpao/:type?/:category?": [
         "TonyRL"
@@ -1253,6 +1288,9 @@
     "/nowcoder/schedule/:propertyId?/:typeId?": [
         "junfengP"
     ],
+    "/npm/package/:name": [
+        "Fatpandac"
+    ],
     "/nsfc/news/:type?": [
         "Derekmini"
     ],
@@ -1374,7 +1412,29 @@
     "/qq88/:category?": [
         "nczitzk"
     ],
-    "/qweather/weather/:location": [
+    "/quicker/qa/:category?/:state?": [
+        "Cesaryuan",
+        "nczitzk"
+    ],
+    "/quicker/share/:category?": [
+        "nczitzk"
+    ],
+    "/quicker/update": [
+        "Cesaryuan",
+        "nczitzk"
+    ],
+    "/quicker/user/:category/:id": [
+        "Cesaryuan",
+        "nczitzk"
+    ],
+    "/quicker/versions": [
+        "Cesaryuan",
+        "nczitzk"
+    ],
+    "/qweather/qweather/3days/:location": [
+        "Rein-Ou"
+    ],
+    "/qweather/qweather/now/:location": [
         "Rein-Ou"
     ],
     "/radio-canada/latest/:language?": [
@@ -1819,10 +1879,6 @@
         "Pulset"
     ],
     "/1draw": [],
-    "/quicker/qa": [],
-    "/quicker/update": [],
-    "/quicker/user/action/:uid/:person": [],
-    "/quicker/user/:uid/:person": [],
     "/benedictevans": [],
     "/bangumi/calendar/today": [],
     "/bangumi/subject/:id/:type": [],
@@ -2440,10 +2496,6 @@
     "/leetcode/articles": [],
     "/leetcode/submission/us/:user": [],
     "/leetcode/submission/cn/:user": [],
-    "/hupu/bxj/:id/:order?": [],
-    "/hupu/bbs/:id/:order?": [],
-    "/hupu/all/:caty": [],
-    "/hupu/dept/:dept": [],
     "/xiaomieu/releases": [],
     "/sketch/beta": [],
     "/sketch/updates": [],
