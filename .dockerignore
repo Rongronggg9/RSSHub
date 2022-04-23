@@ -19,6 +19,8 @@ test
 process.json
 app.json
 .travis.yml
+.puppeteer_version
+app-minimal
 
 #git but keep the git commit hash
 .git/logs
