@@ -489,9 +489,6 @@
     "/douban/topic/:id/:sort?": [
         "LogicJake"
     ],
-    "/douyin/user/works/:id/:embed?": [
-        "Rongronggg9"
-    ],
     "/dtcj/datahero/:category?": [
         "nczitzk"
     ],
