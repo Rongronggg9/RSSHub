@@ -1,1 +1,1 @@
-FROM rongronggg9/rsshub
+FROM rongronggg9/rsshub:chromium-bundled
