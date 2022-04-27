@@ -1,1 +1,1 @@
-FROM rongronggg9/rsshub:chromium-bundled-2022-04-26
+FROM rongronggg9/rsshub:chromium-bundled-2022-04-27
