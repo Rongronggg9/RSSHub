@@ -1,6 +1,6 @@
 name: test
 
-on: [push, pull_request]
+on: [ push, pull_request ]
 
 permissions:
   contents: read
@@ -16,7 +16,7 @@ jobs:
         options: --entrypoint redis-server
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: [ '14', '16' ]
     name: Jest on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
@@ -28,16 +28,22 @@ jobs:
       - run: npm run jest
         env:
           REDIS_URL: redis://localhost:${{ job.services.redis.ports[6379] }}/
+      - run: |
+          set -ex
+          sudo apt-get update
+          sudo apt-get install -yq --no-install-recommends chromium-browser
+      - run: npm run jest puppeteer
+        env:
+          CHROMIUM_EXECUTABLE_PATH: chromium-browser
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
   docs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: [ '14', '16' ]
     name: Build docs on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
@@ -53,7 +59,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ['14', '16']
+        node-version: [ '14', '16' ]
     name: Build radar and maintainer on Node ${{ matrix.node-version }}
     steps:
       - uses: actions/checkout@v3
