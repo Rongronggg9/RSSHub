@@ -1,0 +1,119 @@
+name: 'reproduce BuildKit cache issue'
+
+on:
+  push:
+    branches:
+      - reproduce-buildkit-cache-issue
+  workflow_dispatch: ~
+
+jobs:
+  build-and-write-cache:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        cache-to:
+          - key: 'gha'
+            value: 'type=gha,scope=reproduce-buildkit-cache-issue,mode=max'
+          - key: 'registry'
+            value: 'type=registry,ref=rongronggg9/rsshub:reproduce-buildkit-cache-issue-buildcache,mode=max'
+          - key: 'registry-uncompressed'
+            value: 'type=registry,ref=rongronggg9/rsshub:reproduce-buildkit-cache-issue-buildcache-uncompressed,mode=max,compression=uncompressed'
+          - key: 'local'
+            value: 'type=local,dest=/tmp/.buildx-cache-new,mode=max'
+          - key: 'local-uncompressed'
+            value: 'type=local,dest=/tmp/.buildx-cache-new,mode=max,compression=uncompressed'
+    name: build-${{ matrix.cache-to.key }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Cache Docker layers
+        if: ${{ startsWith(matrix.cache-to.key, 'local') }}
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ matrix.cache-to.key }}-${{ github.sha }}
+
+      - name: Build and push Docker image (ordinary version)
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: false
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
+          cache-to: ${{ matrix.cache-to.value }}
+
+      - name: Inspect build cache size
+        run: docker buildx du --verbose
+
+      - name: Inspect RX and TX bytes
+        run: |
+          for i in $(ls -d /sys/class/net/*); do
+            echo $i;
+            echo "RX: $(expr $(cat $i/statistics/rx_bytes) / 1024 / 1024) MiB";
+            echo "TX: $(expr $(cat $i/statistics/tx_bytes) / 1024 / 1024) MiB";
+            echo;
+          done
+
+      - name: Inspect local build cache size and move cache
+        if: ${{ startsWith(matrix.cache-to.key, 'local') }}
+        run: |
+          set -x
+          du -h /tmp/.buildx-cache-new
+          ls -Rhl /tmp/.buildx-cache-new
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+
+  rebuild-with-cache:
+    runs-on: ubuntu-latest
+    needs:
+      - build-and-write-cache
+    strategy:
+      matrix:
+        cache-from:
+          - key: 'gha'
+            value: 'type=gha,scope=reproduce-buildkit-cache-issue'
+          - key: 'registry'
+            value: 'type=registry,ref=rongronggg9/rsshub:reproduce-buildkit-cache-issue-buildcache'
+          - key: 'registry-uncompressed'
+            value: 'type=registry,ref=rongronggg9/rsshub:reproduce-buildkit-cache-issue-buildcache-uncompressed'
+          - key: 'local'
+            value: 'type=local,src=/tmp/.buildx-cache'
+          - key: 'local-uncompressed'
+            value: 'type=local,src=/tmp/.buildx-cache'
+    name: rebuild-${{ matrix.cache-from.key }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Cache Docker layers
+        if: ${{ startsWith(matrix.cache-from.key, 'local') }}
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ matrix.cache-from.key }}-${{ github.sha }}
+
+      - name: Build and push Docker image (ordinary version)
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: false
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
+          cache-from: ${{ matrix.cache-from.value }}
