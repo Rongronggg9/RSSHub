@@ -3,7 +3,7 @@ name: 'reproduce BuildKit cache issue'
 on:
   push:
     branches:
-      - reproduce-buildkit-cache-issue
+      - reproduce-buildkit-cache-issue**
   workflow_dispatch: ~
 
 jobs:

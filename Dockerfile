@@ -32,8 +32,7 @@ COPY ./package.json /app/
 RUN \
     set -ex && \
     export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true && \
-    yarn install --production --frozen-lockfile --network-timeout 1000000 && \
-    yarn cache clean
+    yarn install --frozen-lockfile --network-timeout 1000000
 
 # ---------------------------------------------------------------------------------------------------------------------
 
@@ -66,8 +65,7 @@ RUN \
         npm config set registry https://registry.npmmirror.com && \
         yarn config set registry https://registry.npmmirror.com ; \
     fi; \
-    yarn add @vercel/nft@$(cat .nft_version) fs-extra@$(cat .fs_extra_version) && \
-    yarn cache clean
+    yarn add @vercel/nft@$(cat .nft_version) fs-extra@$(cat .fs_extra_version)
 
 COPY . /app
 COPY --from=dep-builder /app /app
@@ -104,8 +102,7 @@ RUN \
         fi; \
         echo 'Downloading Chromium...' && \
         unset PUPPETEER_SKIP_CHROMIUM_DOWNLOAD && \
-        yarn add puppeteer@$(cat /app/.puppeteer_version) && \
-        yarn cache clean ; \
+        yarn add puppeteer@$(cat /app/.puppeteer_version) ; \
     else \
         mkdir -p /app/node_modules/puppeteer ; \
     fi;
