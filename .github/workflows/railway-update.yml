@@ -1,5 +1,8 @@
 name: Update Dockerfile for Railway.app
 
+# The workflow was EOL before its birth.
+# https://github.com/DIYgod/RSSHub/pull/9626
+
 on:
   schedule:
     - cron: '0 12 * * *'  # only valid if the workflow exists in the default branch
@@ -83,6 +86,11 @@ jobs:
         with:
           python-version: '3.10'
 
+      # Why Python? Oh, do you really love introducing tons of third-party (recursive) dependencies from npm?
+      # Once deployed via the "Deploy on Railway" button, there's NO WAY to remotely upgrade the dependencies of this
+      # workflow for users. (refer to scripts/railway/README.md for more details)
+      # Indeed, there are some workarounds to write a JS without any third-party dependencies, but, wow, I mean, it is
+      # even uglier and more human-unfriendly than introducing a Python script.
       - name: Update Dockerfile (upstream)
         if: ${{ matrix.type == 'upstream' }}
         run: python -u scripts/railway/update.py
@@ -101,6 +109,8 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date -uIseconds)"
 
+      # FIXME: buggy, please replace the action with a .github-un-sanitized one
+      # https://github.com/JamesIves/github-pages-deploy-action/discussions/1075#discussion-4000071
       - name: Push
         uses: JamesIves/github-pages-deploy-action@v4
         with:

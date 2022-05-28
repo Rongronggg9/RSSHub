@@ -1,5 +1,7 @@
 # RSSHub Dockerfile for [Railway.app]
 
+> This instruction is intended to be the main README for both the `railway` and `railway-downstream` branches.
+
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/PyitVR) <- To be replaced by the maintainer.
 
 ## Upstream usage
