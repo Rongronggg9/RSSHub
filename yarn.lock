@@ -4591,10 +4591,10 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-currency-symbol-map@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/currency-symbol-map/-/currency-symbol-map-5.0.1.tgz#447629c7e26730299aa6174c55bde281f682b2e5"
-  integrity sha512-2yHvoVBPIS9Dx7fjritu9l7UHWo4Z3D2oQnQj8AYwUee2j/PAcoHB4issCqwabfbipISZ/iG6vVYsfrAoks2eA==
+currency-symbol-map@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/currency-symbol-map/-/currency-symbol-map-5.1.0.tgz#59531fbe977ba95e8d358e90e3c9e9053efb75ad"
+  integrity sha512-LO/lzYRw134LMDVnLyAf1dHE5tyO6axEFkR3TXjQIOmMkAM9YL6QsiUwuXzZAmFnuDJcs4hayOgyIYtViXFrLw==
 
 cyclist@^1.0.1:
   version "1.0.1"
@@ -11483,10 +11483,10 @@ ramda@^0.26.1:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
   integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
-rand-user-agent@1.0.64:
-  version "1.0.64"
-  resolved "https://registry.yarnpkg.com/rand-user-agent/-/rand-user-agent-1.0.64.tgz#8db50623700af8e34b318cbace2ce0a87ef87b9c"
-  integrity sha512-U1N/dvv+nkgci107Rgb9bMKaQB5SY7TQsoYhGBvhQWVMug1LfRCpgTsLXAcOU2PFzJxxXShfJxidaEoBUCPDWw==
+rand-user-agent@1.0.65:
+  version "1.0.65"
+  resolved "https://registry.yarnpkg.com/rand-user-agent/-/rand-user-agent-1.0.65.tgz#c33eb859245c725f6b3d55820ba7fb87e6ece23b"
+  integrity sha512-QLUI7l+0GQt/IpMEyamViPmknirXFGGpTIhxfizhBggrfUciwBh4h9iSgetRDzVHksogUdjMezNEdnoiOV/PuA==
 
 randexp@0.4.6:
   version "0.4.6"
