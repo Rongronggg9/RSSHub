@@ -244,6 +244,28 @@ pageClass: routes
 
 <Route author="xyqfer" example="/nga/post/18449558" path="/nga/post/:tid"  :paramsDesc="['帖子 id, 可在帖子 URL 找到']" radar="1" rssbud="1"/>
 
+## PLAYNO.1 玩樂達人
+
+### AV
+
+<Route author="TonyRL" example="/playno1/av" path="/playno1/av/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1"> 
+
+| 全部文章 | AV 新聞 | AV 導覽 |
+| ---- | ----- | ----- |
+| 78   | 3     | 5     |
+
+</Route>
+
+### 情趣
+
+<Route author="TonyRL" example="/playno1/st" path="/playno1/st/:catid?" :paramsDesc="['分类，见下表，默认为全部文章']" radar="1" rssbud="1"> 
+
+| 全部文章 | 情趣體驗報告     | 情趣新聞 | 情趣研究所    |
+| ---- | ---------- | ---- | -------- |
+| all  | experience | news | graduate |
+
+</Route>
+
 ## RF 技术社区
 
 ### 文章
@@ -345,6 +367,12 @@ pageClass: routes
 | others | lang | socsci | sci-fi | collections |
 
 </Route>
+
+## 第一会所
+
+### 子版块
+
+<Route author="TonyRL" example="/sis001/forum/322" path="/sis001/forum/:id?" :paramsDesc="['子版块 ID，可在子论坛 URL 找到，默认为 `Funny Jokes | 短篇笑话区`']" radar="1" rssbud="1"/>
 
 ## 电鸭社区
 
@@ -695,6 +723,18 @@ pageClass: routes
 ### 焦点新闻
 
 <Route author="nczitzk" example="/creaders/headline" path="/creaders/headline"/>
+
+## 威锋
+
+### 社区
+
+<Route author="TonyRL" example="/feng/forum/1" path="/feng/forum/:id/:type?" :paramsDesc="['版块 ID，可在版块 URL 找到', '排序，见下表，默认为 `all`']" radar="1" rssbud="1"> 
+
+| 最新回复   | 最新发布 | 热门  | 精华      |
+| ------ | ---- | --- | ------- |
+| newest | all  | hot | essence |
+
+</Route>
 
 ## 文学城
 
