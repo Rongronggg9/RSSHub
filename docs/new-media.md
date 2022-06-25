@@ -1174,6 +1174,16 @@ IPFS 网关有可能失效，那时候换成其他网关。
 
 </Route>
 
+## SupChina
+
+### Feed
+
+<Route author="nczitzk" example="/supchina" path="/supchina"/>
+
+### Podcasts
+
+<Route author="nczitzk" example="/supchina/podcasts" path="/supchina/podcasts"/>
+
 ## swissinfo
 
 ### 分类
@@ -3370,6 +3380,12 @@ column 为 third 时可选的 category:
 触发反爬会只抓取到标题，建议自建。
 
 ## 网易新闻
+
+::: warning 注意
+
+若视频因防盗链而无法播放，请参考 [通用参数 -> 多媒体处理](/parameter.html#duo-mei-ti-chu-li) 配置 `multimedia_hotlink_template` **或** `wrap_multimedia_in_iframe`。
+
+:::
 
 ### 今日关注
 
