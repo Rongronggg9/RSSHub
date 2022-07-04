@@ -58,7 +58,7 @@ pageClass: routes
 
 ### 搜索文章
 
-<Route author="xyqfer kt286" example="/36kr/search/article/ofo" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
+<Route author="xyqfer kt286 nczitzk" example="/36kr/search/article/ofo" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
 
 ## 52hrtt 华人头条
 
@@ -2663,6 +2663,18 @@ column 为 third 时可选的 category:
 | 最新 | 推薦 | 熱門 |
 | -- | -- | -- |
 | 1  | 2  | 3  |
+
+</Route>
+
+## 慢雾科技
+
+### 动态
+
+<Route author="AtlasQuan" example="/slowmist/research" path="/slowmist/:type?" :paramsDesc="['分类，见下表，默认为公司新闻']">
+
+| 公司新闻 | 漏洞披露 | 技术研究     |
+| ---- | ---- | -------- |
+| news | vul  | research |
 
 </Route>
 
