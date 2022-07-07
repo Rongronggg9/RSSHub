@@ -1113,6 +1113,18 @@ category 对应的关键词有
 
 <Route author="wushijishan nczitzk" example="/kaopunews/:language?" path="/kaopunews" :paramsDesc="['语言，可选 zh-hans 即简体中文，或 zh-hant 即繁体中文']"/>
 
+## 客家電視台
+
+### 新聞首頁
+
+<Route author="TonyRL" example="/hakkatv/news" path="/hakkatv/news/:type?" :paramsDesc="['新聞，見下表，留空為全部']" radar="1" rssbud="1">
+
+| 客家焦點  | 政經要聞      | 民生醫療    | 地方風采  | 國際萬象          |
+| ----- | --------- | ------- | ----- | ------------- |
+| hakka | political | medical | local | international |
+
+</Route>
+
 ## 理论网
 
 ### 学习时报
@@ -1737,6 +1749,33 @@ category 对应的关键词有
 | index | stock | hongkong | china | international | property | current |
 | ----- | ----- | -------- | ----- | ------------- | -------- | ------- |
 | 全部新闻  | 港股直击  | 香港财经     | 中国财经  | 国际财经          | 地产新闻     | 时事脉搏    |
+
+</Route>
+
+## 星洲网
+
+### 首页
+
+<Route author="nczitzk" example="/sinchew" path="/sinchew" />
+
+### 最新
+
+<Route author="nczitzk" example="/sinchew/latest" path="/sinchew/latest" />
+
+### 分类
+
+<Route author="nczitzk" example="/sinchew/category/头条" path="/sinchew/category/:category?" :paramsDesc="['分类，见下表，亦可以在对应分类页 URL 中找到']">
+
+| 头条 | 国内 | 国际 | 言路 | 财经 | 地方 | 副刊 | 娱乐 | 体育 | 百格 | 星角攝 | 好运来 |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --- | --- |
+
+::: tip 提示
+
+若订阅单级分类 [头条](https://www.sinchew.com.my/category/头条)，其 URL 为 [https://www.sinchew.com.my/category/ 头条](https://www.sinchew.com.my/category/头条)，则路由为 [`/sinchew/category/头条`](https://rsshub.app/sinchew/category/头条)。
+
+若订阅多级分类 [国际 > 天下事](https://www.sinchew.com.my/category/国际/天下事)，其 URL 为 [https://www.sinchew.com.my/category/ 国际 / 天下事](https://www.sinchew.com.my/category/国际/天下事)，则路由为 [`/sinchew/category/国际/天下事`](https://rsshub.app/sinchew/category/国际/天下事)。
+
+:::
 
 </Route>
 

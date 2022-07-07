@@ -265,6 +265,16 @@ pageClass: routes
 
 </Route>
 
+### 指导原则专栏
+
+<Route author="TonyRL" example="/cde/zdyz/domesticGuide" path="/cde/zdyz/:category" :paramsDesc="['类别，见下表']" radar="1" rssbud="1">
+
+|      发布通告     |     征求意见    |
+| :-----------: | :---------: |
+| domesticGuide | opinionList |
+
+</Route>
+
 ## 国家自然科学基金委员会
 
 ### 基金要闻
@@ -519,6 +529,18 @@ pageClass: routes
 | 新闻稿 | 消费资讯 |
 | :-: | :--: |
 | xwg | xfzx |
+
+</Route>
+
+## 台灣法務部廉政署
+
+### 最新消息
+
+<Route author="TonyRL" example="/gov/moj/aac/news" path="/gov/moj/aac/news/:type?" :paramsDesc="['資料大類，留空為全部']">
+
+| 全部 | 其他 | 採購公告 | 新聞稿 | 肅貪 | 預防 | 綜合 | 防疫專區 |
+| -- | -- | ---- | --- | -- | -- | -- | ---- |
+|    | 02 | 01   | 06  | 05 | 04 | 03 | 99   |
 
 </Route>
 
