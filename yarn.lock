@@ -7559,10 +7559,10 @@ interpret@^1.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
-ioredis@5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.1.0.tgz#17bc0bc40f164ef26910ca6e56981c2a9bfdf57e"
-  integrity sha512-HYHnvwxFwefeUBj0hZFejLvd8Q/YNAfnZlZG/hSRxkRhXMs1H8soMEVccHd1WlLrKkynorXBsAtqDGskOdAfVQ==
+ioredis@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/ioredis/-/ioredis-5.2.0.tgz#2644fcebbbcae945f1479f7cf31aa6734bbb13d6"
+  integrity sha512-a1E7qDtuuI+We60TLIm3TMrH5auIhbfINXYag6ZdB+mGJnH8rbmDOpr1V7iUvQQ7pWnEDYI/KXmia5IemsNJEQ==
   dependencies:
     "@ioredis/commands" "^1.1.1"
     cluster-key-slot "^1.1.0"
@@ -10767,13 +10767,13 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
-plist@3.0.5:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/plist/-/plist-3.0.5.tgz#2cbeb52d10e3cdccccf0c11a63a85d830970a987"
-  integrity sha512-83vX4eYdQp3vP9SxuYgEM/G/pJQqLUz/V/xzPrzruLs7fz7jxGQ1msZ/mg1nwZxUSuOp4sb+/bEIbRrbzZRxDA==
+plist@3.0.6:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/plist/-/plist-3.0.6.tgz#7cfb68a856a7834bca6dbfe3218eb9c7740145d3"
+  integrity sha512-WiIVYyrp8TD4w8yCvyeIr+lkmrGRd5u0VbRnU+tP/aRLxP/YadJUYOMZJ/6hIa3oUyVCsycXvtNRgd5XBJIbiA==
   dependencies:
     base64-js "^1.5.1"
-    xmlbuilder "^9.0.7"
+    xmlbuilder "^15.1.1"
 
 pn@^1.1.0:
   version "1.1.0"
@@ -11563,10 +11563,10 @@ ramda@^0.26.1:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
   integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
-rand-user-agent@1.0.70:
-  version "1.0.70"
-  resolved "https://registry.yarnpkg.com/rand-user-agent/-/rand-user-agent-1.0.70.tgz#b1cd46bd069c01f096a4d2ed1738a0d8fdea80a6"
-  integrity sha512-0oSPHBXrjqt8y8Iu4bdY7WVvveb/p1/FQFQPPp9PHz6h2xj6exel/vaeUdGok+8ui89KGz5Vb5OSbO78s+JnzQ==
+rand-user-agent@1.0.71:
+  version "1.0.71"
+  resolved "https://registry.yarnpkg.com/rand-user-agent/-/rand-user-agent-1.0.71.tgz#21a01636862874a3bef73a691c7bdc1b9be30bf3"
+  integrity sha512-EjENPlXMoYNHjV8Suyyk+BpZ77IJ3LTy+hGCEh5QQUQGMhes/ZPbTb3ArQqMHYN3533dr7+PJUDfBdex0jdj4Q==
 
 randexp@0.4.6:
   version "0.4.6"
@@ -14621,10 +14621,10 @@ xml2js@0.4.23, xml2js@^0.4.19:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
 
-xmlbuilder@^9.0.7:
-  version "9.0.7"
-  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
-  integrity sha512-7YXTQc3P2l9+0rjaUbLwMKRhtmwg1M1eDf6nag7urC7pIPYLD9W/jmzQ4ptRSUbodw5S0jfoGTflLemQibSpeQ==
+xmlbuilder@^15.1.1:
+  version "15.1.1"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
+  integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
 
 xmlbuilder@~11.0.0:
   version "11.0.1"
