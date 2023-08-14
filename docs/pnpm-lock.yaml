@@ -12,8 +12,8 @@ dependencies:
     specifier: 1.9.10
     version: 1.9.10
   '@vuepress/plugin-pwa':
-    specifier: 1.9.9
-    version: 1.9.9
+    specifier: 1.9.10
+    version: 1.9.10
   '@vuepress/shared-utils':
     specifier: 1.9.9
     version: 1.9.9
@@ -1934,11 +1934,11 @@ packages:
       - debug
     dev: false
 
-  /@vuepress/plugin-pwa@1.9.9:
-    resolution: {integrity: sha512-69kTlTl/mdWSD/+odz73oXvi2SuT8GO+e7YlPZFloeZR3kffC6ywYMip6m4MOalKOSUf0XzD3hCqCNVha6vo8Q==}
+  /@vuepress/plugin-pwa@1.9.10:
+    resolution: {integrity: sha512-pP3CUYKyIpnePswZGj9sBHJUzOczSmWSkmdoJftEnsBQT10YycJ81khS9WKEGPbTurbCOCCXsOzaEqCLysyYaA==}
     dependencies:
-      '@vuepress/shared-utils': 1.9.9
-      '@vuepress/types': 1.9.9
+      '@vuepress/shared-utils': 1.9.10
+      '@vuepress/types': 1.9.10
       register-service-worker: 1.7.2
       workbox-build: 4.3.1
     transitivePeerDependencies:
@@ -1962,6 +1962,22 @@ packages:
       '@vuepress/types': 1.9.9
     transitivePeerDependencies:
       - debug
+    dev: false
+
+  /@vuepress/shared-utils@1.9.10:
+    resolution: {integrity: sha512-M9A3DocPih+V8dKK2Zg9FJQ/f3JZrYsdaM/vQ9F48l8bPlzxw5NvqXIYMK4kKcGEyerQNTWCudoCpLL5uiU0hg==}
+    dependencies:
+      chalk: 2.4.2
+      escape-html: 1.0.3
+      fs-extra: 7.0.1
+      globby: 9.2.0
+      gray-matter: 4.0.3
+      hash-sum: 1.0.2
+      semver: 6.3.0
+      toml: 3.0.0
+      upath: 1.2.0
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@vuepress/shared-utils@1.9.9:
