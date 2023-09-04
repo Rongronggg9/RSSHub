@@ -39,7 +39,7 @@ jobs:
         if: success() || failure()
         with:
           api_key: ${{ secrets.FORESIGHT_KEY }}
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -91,7 +91,7 @@ jobs:
             environment: '{ "CHROMIUM_EXECUTABLE_PATH": "google-chrome-stable" }'
     name: Jest puppeteer on Node ${{ matrix.node-version }} with ${{ matrix.chromium.name }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -133,7 +133,7 @@ jobs:
         working-directory: docs
     name: Build docs on Node ${{ matrix.node-version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
@@ -162,7 +162,7 @@ jobs:
         node-version: [ 18, 20 ]
     name: Build radar and maintainer on Node ${{ matrix.node-version }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v2
         with:
           version: 8
