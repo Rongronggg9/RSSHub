@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 dependencies:
   '@koa/router':
     specifier: 12.0.0
@@ -113,8 +117,8 @@ dependencies:
     specifier: 1.5.0
     version: 1.5.0
   mailparser:
-    specifier: 3.6.5
-    version: 3.6.5
+    specifier: 3.6.7
+    version: 3.6.7
   markdown-it:
     specifier: 13.0.1
     version: 13.0.1
@@ -1107,7 +1111,7 @@ packages:
       '@babel/runtime-corejs2': 7.21.0
       '@postlight/ci-failed-test-reporter': 1.0.26
       cheerio: 0.22.0
-      difflib: github.com/postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed
+      difflib: git/github.com+postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed
       ellipsize: 0.1.0
       iconv-lite: 0.5.0
       moment: 2.29.4
@@ -5190,6 +5194,12 @@ packages:
       uc.micro: 1.0.6
     dev: false
 
+  /linkify-it@5.0.0:
+    resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
+    dependencies:
+      uc.micro: 2.0.0
+    dev: false
+
   /lint-staged@13.2.3:
     resolution: {integrity: sha512-zVVEXLuQIhr1Y7R7YAWx4TZLdvuzk7DnmrsTNL0fax6Z3jrpFcas+vKbzxhhvp6TA55m1SQuWkpzI1qbfDZbAg==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -5374,18 +5384,18 @@ packages:
     hasBin: true
     dev: false
 
-  /mailparser@3.6.5:
-    resolution: {integrity: sha512-nteTpF0Khm5JLOnt4sigmzNdUH/6mO7PZ4KEnvxf4mckyXYFFhrtAWZzbq/V5aQMH+049gA7ZjfLdh+QiX2Uqg==}
+  /mailparser@3.6.7:
+    resolution: {integrity: sha512-/3x8HW70DNehw+3vdOPKdlLuxOHoWcGB5jfx5vJ5XUbY9/2jUJbrrhda5Si8Dj/3w08U0y5uGAkqs5+SPTPKoA==}
     dependencies:
       encoding-japanese: 2.0.0
       he: 1.2.0
       html-to-text: 9.0.5
       iconv-lite: 0.6.3
       libmime: 5.2.1
-      linkify-it: 4.0.1
+      linkify-it: 5.0.0
       mailsplit: 5.4.0
-      nodemailer: 6.9.3
-      tlds: 1.240.0
+      nodemailer: 6.9.9
+      tlds: 1.248.0
     dev: false
 
   /mailsplit@5.4.0:
@@ -5910,8 +5920,8 @@ packages:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
     dev: true
 
-  /nodemailer@6.9.3:
-    resolution: {integrity: sha512-fy9v3NgTzBngrMFkDsKEj0r02U7jm6XfC3b52eoNV+GCrGj+s8pt5OqhiJdWKuw51zCTdiNR/IUD1z33LIIGpg==}
+  /nodemailer@6.9.9:
+    resolution: {integrity: sha512-dexTll8zqQoVJEZPwQAKzxxtFn0qTnjdQTchoU6Re9BUUGBJiOy3YMn/0ShTW6J5M0dfQ1NeDeRTTl4oIWgQMA==}
     engines: {node: '>=6.0.0'}
     dev: false
 
@@ -7525,6 +7535,11 @@ packages:
     hasBin: true
     dev: false
 
+  /tlds@1.248.0:
+    resolution: {integrity: sha512-noj0KdpWTBhwsKxMOXk0rN9otg4kTgLm4WohERRHbJ9IY+kSDKr3RmjitaQ3JFzny+DyvBOQKlFZhp0G0qNSfg==}
+    hasBin: true
+    dev: false
+
   /tmpl@1.0.5:
     resolution: {integrity: sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==}
     dev: true
@@ -7702,6 +7717,10 @@ packages:
 
   /uc.micro@1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
+    dev: false
+
+  /uc.micro@2.0.0:
+    resolution: {integrity: sha512-DffL94LsNOccVn4hyfRe5rdKa273swqeA5DJpMOeFmEn1wCDc7nAbbB0gXlgBCL7TNzeTv6G7XVWzan7iJtfig==}
     dev: false
 
   /uglify-js@3.4.10:
@@ -8153,8 +8172,8 @@ packages:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: true
 
-  github.com/postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed:
-    resolution: {tarball: https://codeload.github.com/postlight/difflib.js/tar.gz/32e8e38c7fcd935241b9baab71bb432fd9b166ed}
+  git/github.com+postlight/difflib.js/32e8e38c7fcd935241b9baab71bb432fd9b166ed:
+    resolution: {commit: 32e8e38c7fcd935241b9baab71bb432fd9b166ed, repo: git@github.com:postlight/difflib.js.git, type: git}
     name: difflib
     version: 0.2.6
     dependencies:
