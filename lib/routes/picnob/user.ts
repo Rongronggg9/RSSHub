@@ -3,12 +3,44 @@ import { Route, ViewType } from '@/types';
 import cache from '@/utils/cache';
 import { parseRelativeDate } from '@/utils/parse-date';
 import { load } from 'cheerio';
+import { connect, Options } from 'puppeteer-real-browser';
+
+const realBrowserOption: Options = {
+    args: ['--start-maximized'],
+    turnstile: true,
+    headless: false,
+    // disableXvfb: true,
+    // ignoreAllFlags:true,
+    customConfig: {
+        chromePath: config.chromiumExecutablePath,
+    },
+    connectOption: {
+        defaultViewport: null,
+    },
+    plugins: [],
+};
 
 async function getPageWithRealBrowser(url: string, selector: string) {
     try {
-        const res = await fetch(`${config.puppeteerRealBrowserService}?url=${encodeURIComponent(url)}&selector=${encodeURIComponent(selector)}`);
-        const json = await res.json();
-        return (json.data?.at(0) || '') as string;
+        if (config.puppeteerRealBrowserService) {
+            const res = await fetch(`${config.puppeteerRealBrowserService}?url=${encodeURIComponent(url)}&selector=${encodeURIComponent(selector)}`);
+            const json = await res.json();
+            return (json.data?.at(0) || '') as string;
+        } else {
+            const { page, browser } = await connect(realBrowserOption);
+            await page.goto(url, { timeout: 50000 });
+            let verify: boolean | null = null;
+            const startDate = Date.now();
+            while (!verify && Date.now() - startDate < 50000) {
+                // eslint-disable-next-line no-await-in-loop, no-restricted-syntax
+                verify = await page.evaluate((sel) => (document.querySelector(sel) ? true : null), selector).catch(() => null);
+                // eslint-disable-next-line no-await-in-loop
+                await new Promise((r) => setTimeout(r, 1000));
+            }
+            const html = await page.content();
+            await browser.close();
+            return html;
+        }
     } catch {
         return '';
     }
@@ -47,8 +79,8 @@ export const route: Route = {
 };
 
 async function handler(ctx) {
-    if (!config.puppeteerRealBrowserService) {
-        throw new Error('PUPPETEER_REAL_BROWSER_SERVICE is required to use this route.');
+    if (!config.puppeteerRealBrowserService && !config.chromiumExecutablePath) {
+        throw new Error('PUPPETEER_REAL_BROWSER_SERVICE or CHROMIUM_EXECUTABLE_PATH is required to use this route.');
     }
 
     // NOTE: 'picnob' is still available, but all requests to 'picnob' will be redirected to 'pixnoy' eventually
@@ -94,7 +126,10 @@ async function handler(ctx) {
         } else {
             let description = '';
             for (const pic of $('.pic img').toArray()) {
-                description += `<img src="${$(pic).attr('data-src')}" /><br />`;
+                const dataSrc = $(pic).attr('data-src');
+                if (dataSrc) {
+                    description += `<img src="${dataSrc}" /><br />`;
+                }
             }
             description += $('.sum_full').text();
             return description;
