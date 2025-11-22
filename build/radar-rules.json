@@ -11322,6 +11322,19 @@
       }
     ]
   },
+  "cloudflarestatus.com": {
+    "_name": "Cloudflare Status",
+    "www": [
+      {
+        "title": "Status",
+        "docs": "https://docs.rsshub.app/routes/programming",
+        "source": [
+          "/"
+        ],
+        "target": "/cloudflarestatus/"
+      }
+    ]
+  },
   "cls.cn": {
     "_name": "财联社",
     ".": [
@@ -15006,6 +15019,16 @@
   },
   "ecnu.edu.cn": {
     "_name": "East China Normal University 华东师范大学",
+    "bksy": [
+      {
+        "title": "本科生院通知",
+        "docs": "https://docs.rsshub.app/routes/university",
+        "source": [
+          "/"
+        ],
+        "target": "/ecnu/tzgg"
+      }
+    ],
     "acm": [
       {
         "title": "ACM Online-Judge contests list",
@@ -17692,6 +17715,16 @@
           "/detail/:name/:id"
         ],
         "target": "/google/chrome/extension/:id"
+      }
+    ],
+    "play": [
+      {
+        "title": "Play Store Update",
+        "docs": "https://docs.rsshub.app/routes/program-update",
+        "source": [
+          "/store/apps/details?id=:id"
+        ],
+        "target": "/google/play/:id/:lang?"
       }
     ]
   },
@@ -36153,7 +36186,7 @@
     "_name": "Instagram",
     "www": [
       {
-        "title": "User Profile - Picnob",
+        "title": "User Profile - Pixnoy",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
           "/profile/:id"
@@ -36161,7 +36194,7 @@
         "target": "/picnob/user/:id"
       },
       {
-        "title": "User Profile - Picnob",
+        "title": "User Profile - Pixnoy",
         "docs": "https://docs.rsshub.app/routes/social-media",
         "source": [
           "/profile/:id/tagged"

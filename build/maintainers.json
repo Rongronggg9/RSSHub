@@ -1639,6 +1639,9 @@
   "/cline/blog": [
     "yeshan333"
   ],
+  "/cloudflarestatus/": [
+    "nczitzk"
+  ],
   "/cloudnative/blog": [
     "aneasystone"
   ],
@@ -2537,6 +2540,10 @@
   "/ebc/realtime/:category?": [
     "quiniapiezoelectricity"
   ],
+  "/ecnu/bksy": [
+    "ChiyoYuki",
+    "FrozenStarrrr"
+  ],
   "/ecnu/acm/contest/:category?": [
     "a180285"
   ],
@@ -3286,6 +3293,9 @@
   "/google/news/:category/:locale": [
     "zoenglinghou",
     "pseudoyu"
+  ],
+  "/google/play/:id/:lang?": [
+    "surwall"
   ],
   "/google/research": [
     "Levix",
@@ -6367,6 +6377,9 @@
     "DIYgod",
     "hyoban",
     "Rongronggg9"
+  ],
+  "/picnob.info/user/:id/:type?": [
+    "TonyRL"
   ],
   "/picuki/profile/:id/:type?/:functionalFlag?": [
     "hoilc",
