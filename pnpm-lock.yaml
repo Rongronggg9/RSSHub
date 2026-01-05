@@ -184,8 +184,8 @@ importers:
         specifier: 2.2.3
         version: 2.2.3
       narou:
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 2.0.0
+        version: 2.0.0
       notion-to-md:
         specifier: 3.1.9
         version: 3.1.9
@@ -4710,8 +4710,8 @@ packages:
     engines: {node: ^18 || >=20}
     hasBin: true
 
-  narou@1.2.0:
-    resolution: {integrity: sha512-J9ju4O3hsTa+TcP4BEYEJ3ED8dNt5ktCwCb+E/zp0EMvmMsagqQ+uJLNtgSvPZBgJZPqB2bfos5AYPeahvEdEA==}
+  narou@2.0.0:
+    resolution: {integrity: sha512-4JXcSUUa02IlEFBGfb9I4RNIVAFAGWgPjIgvBtYrZfbGRZs5GVuob1UKpuYRL6wQGbqDUG4u5eBzhgJGZmyZ/Q==}
     engines: {node: '>=16.0.0', pnpm: '>=8'}
 
   natural-compare@1.4.0:
@@ -6055,6 +6055,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@4.0.0:
     resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
@@ -10972,7 +10973,7 @@ snapshots:
 
   nanoid@5.1.5: {}
 
-  narou@1.2.0: {}
+  narou@2.0.0: {}
 
   natural-compare@1.4.0: {}
 
