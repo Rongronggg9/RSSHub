@@ -16650,8 +16650,7 @@ export default {
           "embed": "默认为开启内嵌视频, 任意值为关闭"
         },
         "categories": [
-          "social-media",
-          "popular"
+          "social-media"
         ],
         "location": "video-all.ts",
         "module": () => import('@/routes/bilibili/video-all.ts')
@@ -92530,7 +92529,8 @@ export default {
       "/user/:id/:type?": {
         "path": "/user/:id/:type?",
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
         "example": "/picnob.info/user/xlisa_olivex",
         "parameters": {
