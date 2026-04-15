@@ -16384,7 +16384,8 @@ export default {
           "hyoban"
         ],
         "categories": [
-          "social-media"
+          "social-media",
+          "popular"
         ],
         "view": 3,
         "example": "/bilibili/ranking/all",
@@ -51290,7 +51291,8 @@ export default {
           "nczitzk"
         ],
         "categories": [
-          "government"
+          "government",
+          "popular"
         ],
         "radar": [
           {
@@ -94634,8 +94636,7 @@ export default {
       "/pornstar/:username/:language?/:sort?": {
         "path": "/pornstar/:username/:language?/:sort?",
         "categories": [
-          "multimedia",
-          "popular"
+          "multimedia"
         ],
         "view": 3,
         "example": "/pornhub/pornstar/june-liu/www/mr",
@@ -94825,8 +94826,7 @@ export default {
       "/search/:keyword": {
         "path": "/search/:keyword",
         "categories": [
-          "multimedia",
-          "popular"
+          "multimedia"
         ],
         "view": 3,
         "example": "/pornhub/search/stepsister",
